@@ -1,0 +1,104 @@
+header {
+  .container_header {
+    @include container_box(1146px, 100%, 0 5px, 0 auto);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 70px;
+    .nav_box {
+      max-width: 1136px;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: flex-end;
+      padding-top: 60px;
+      margin-bottom: 82px;
+      @media (max-width: 870px) {
+        justify-content: center;
+      }
+      @media (max-width: 530px) {
+        justify-content: space-between;
+        margin-bottom: 42px;
+      }
+      .header_logo {
+        width: 120px;
+        display: none;
+        padding-left: 10px;
+        @media (max-width: 530px) {
+          display: block;
+        }
+      }
+      .menu {
+        display: inline-block;
+        height: 50px;
+        display: none;
+        margin-right: 10px;
+        @media (max-width: 530px) {
+          display: block;
+        }
+      }
+      nav {
+        max-width: 568px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width: 530px) {
+          display: none;
+        }
+        a {
+          @extend %nav_text;
+          text-decoration: none;
+        }
+      }
+      nav:last-child {
+        margin-right: 150px;
+        @media (max-width: 870px) {
+          margin-right: 0px;
+        }
+      }
+    }
+
+    .header_pictures {
+      position: relative;
+      .rock_one_people {
+        img {
+          position: relative;
+          max-width: 1136px;
+          width: 100%;
+        }
+      }
+      .rock_people_pictures {
+        max-width: 1136px;
+        width: 100%;
+        position: absolute;
+        top: 43%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 0 88px;
+        @media (max-width: 1000px) {
+          padding: 0 50px;
+        }
+        @media (max-width: 650px) {
+          padding: 0 27px;
+        }
+        .rock_two_people {
+          display: block;
+          max-width: 960px;
+          width: 100%;
+        }
+        .orange {
+          position: absolute;
+          top: -10px;
+          right: 75px;
+          @media (max-width: 1000px) {
+            right: 40px;
+          }
+          @media (max-width: 650px) {
+            right: 15px;
+          }
+        }
+      }
+    }
+  }
+}
